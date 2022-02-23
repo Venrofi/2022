@@ -1,0 +1,44 @@
+*,
+*::before,
+*::after {
+box-sizing: border-box;
+}
+
+:root{
+    --primary-soft-blue: hsl(215, 51%, 70%);
+    --primary-cyan: hsl(178, 100%, 50%);
+
+    --dark-blue-main: hsl(217, 54%, 11%);
+    --dark-blue-card: hsl(216, 50%, 16%);
+    --dark-blue-line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%)
+}
+
+html{
+    margin: 0;
+    height: 100%;
+}
+
+body{
+    background-color: hsl(182, 54%, 63%);
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0;
+}
+
+h1{
+    color: white;
+    font-size: 5rem;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10% 0;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: hsl(182, 39%, 55%);
+    text-align: center;
+}

@@ -55,14 +55,47 @@
         -moz-box-shadow: 0px 0px 50px 16px var(--dark-blue-line);
         box-shadow: 0px 0px 50px 16px hsl(220, 45%, 8%);
       }
-      .card #main-img{
+      .card h2{
+        cursor: pointer;
+      }
+      .card h2:hover{
+        color: var(--primary-cyan);
+      }
+      
+      .main-img{
+        position: relative;
+        cursor: pointer;
+      }
+      .main-img img{
         border-radius: 10px;
+        max-width: 100%;
+        height: auto;
+        transition: all 0.8s;
+        cursor: pointer;
+      }
+      .view-icon {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0%;
+        background-image: url(images/icon-view.svg);
+        background-color: hsla(178, 100%, 50%, 0.5);
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: center;
+        border-radius: 1rem;
+        opacity: 0;
+        transition: 0.6s ease;
+      }
+      .view-icon:hover {
+          opacity: 1;
       }
 
       .offer{
         display: flex;
         justify-content: space-between;
       }
+
       .crypto-value{
         width: 50%;
         display: flex;
@@ -104,6 +137,7 @@
         background-color: var(--dark-blue-line);
         margin: 3% 0;
       }
+
       .item-author{
         display: flex;
         justify-content: flex-start;
@@ -111,9 +145,10 @@
         gap: 20px;
       }
       .item-author img{
-        max-width: 20%;
-        max-height: 20%;
+        max-width: 15%;
         display: block;
+        border-radius: 50%;
+        border: 1px solid var(--primary-soft-blue);
       }
       .item-author h5{
         color: var(--primary-soft-blue);
@@ -123,6 +158,10 @@
       .item-author span{
         color: var(--white);
         font-weight: 600;
+        cursor: pointer;
+      }
+      .item-author span:hover{
+        color: var(--primary-cyan);
       }
 
       @media (max-width:1500px) {
@@ -160,7 +199,10 @@
 
   <body>
   <div class="card">
-      <img src="images/image-equilibrium.jpg" id="main-img"alt="Image of Equilibrium">
+      <div class="main-img">
+        <img src="images/image-equilibrium.jpg" alt="Image of Equilibrium">
+          <div class="view-icon"></div>
+      </div>
       <h2>Equilibrium #3429</h2>
       <p>Our Equilibrium collection promotes balance and calm.</p>
 
@@ -183,7 +225,7 @@
 
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Radosław Terelak</a>.
+      Coded by <a href="https://venrofi.netlify.app/" target="_blank">Radosław Terelak</a>.
     </div>
   </body>
 </html>
