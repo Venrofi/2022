@@ -1,0 +1,163 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+$primary-pale-blue: hsl(225, 100%, 94%);
+$primary-bright-blue: hsl(245, 75%, 52%);
+
+$neutral-very-pale-blue: hsl(225, 100%, 98%);
+$neutral-desaturated-blue: hsl(224, 23%, 55%);
+$neutral-dark-blue: hsl(223, 47%, 23%);
+
+$box-shadow-color: hsl(212, 45%, 80%);
+  
+body{
+    margin: 0;
+    background-image: url(../images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: $primary-pale-blue;
+    font-family: 'Red Hat Display', sans-serif;
+}
+p{
+    font-size: 16px;
+    font-weight: 500;
+    margin: 1rem;
+    line-height: 1.5;
+    color: $neutral-desaturated-blue;
+}
+a{
+    font-weight: 700;
+    color: $primary-bright-blue;
+    &:hover{
+        color:hsl(245, 74%, 67%);
+        text-decoration: none;
+    }
+}
+h1{
+    font-weight: 900;
+    font-size: 28px;
+    margin: 1rem 0;
+    color: $neutral-dark-blue;
+}
+h2{
+    font-weight: 700;
+    font-size: 18px;
+    color: $neutral-dark-blue;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    margin: 6% 38%;
+    border-radius: 20px;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0px 0px 24px 0px $box-shadow-color;
+}
+
+.hero-img img{
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+
+.content{
+    margin: 5% 10%;
+
+    p{
+        padding: 0 5%;
+    }
+}
+
+
+
+.current-plan{
+    display: flex;
+    flex-direction: row;
+    background-color: $neutral-very-pale-blue;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3% 5%;
+    border-radius: 10px;
+}
+
+.pricing{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 5%;
+    p, h2{
+        padding: 0;
+        margin: 0;
+    }
+}
+
+button{
+    margin-top: 8%;
+    width: 100%;
+    padding: 5% 10%;
+    border: none;
+    border-radius: 10px;
+    font-weight: 900;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.pay{
+    background-color: $primary-bright-blue;
+    color: white;
+    box-shadow: 0px 16px 5px 0px hsl(243, 40%, 90%);
+    &:hover{
+        background-color:hsl(245, 74%, 67%);
+    }
+}
+
+.cancel{
+    background: none;
+    width: 50%;
+    padding: 0;
+    margin-bottom: 10%;
+    color: $neutral-desaturated-blue;
+    &:hover{
+        color: $neutral-dark-blue;
+    }
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+
+@media (max-width:1500px) {
+    main{
+        margin: 8% 35%;
+        padding: 2%;
+    }
+}
+@media (max-width:1000px) {
+    main{
+        margin: 8% 30%;
+        padding: 3%;
+    }
+}
+@media (max-width:750px) {
+    main{
+        margin: 8% 20%;
+        padding: 4%;
+    }
+}
+@media (max-width:500px) {
+    main{
+    margin: 8% 10%;
+    padding: 5%;
+    }
+  }
+  @media (max-width:400px) {
+    main{
+    margin: 8% 5%;
+    padding: 6%;
+    }
+  }

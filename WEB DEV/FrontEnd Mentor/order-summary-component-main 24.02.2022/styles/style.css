@@ -1,0 +1,198 @@
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+body {
+  margin: 0;
+  background-image: url(../images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #e0e8ff;
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 1rem;
+  line-height: 1.5;
+  color: #7280a7;
+}
+
+a {
+  font-weight: 700;
+  color: #3829e0;
+}
+
+a:hover {
+  color: #776de9;
+  text-decoration: none;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 28px;
+  margin: 1rem 0;
+  color: #1f2f56;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 18px;
+  color: #1f2f56;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 6% 38%;
+  border-radius: 20px;
+  text-align: center;
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 24px 0px #b5cae3;
+          box-shadow: 0px 0px 24px 0px #b5cae3;
+}
+
+.hero-img img {
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+}
+
+.content {
+  margin: 5% 10%;
+}
+
+.content p {
+  padding: 0 5%;
+}
+
+.current-plan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: #f5f7ff;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 3% 5%;
+  border-radius: 10px;
+}
+
+.pricing {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 5%;
+}
+
+.pricing p, .pricing h2 {
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  margin-top: 8%;
+  width: 100%;
+  padding: 5% 10%;
+  border: none;
+  border-radius: 10px;
+  font-weight: 900;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.pay {
+  background-color: #3829e0;
+  color: white;
+  -webkit-box-shadow: 0px 16px 5px 0px #dcdbf0;
+          box-shadow: 0px 16px 5px 0px #dcdbf0;
+}
+
+.pay:hover {
+  background-color: #776de9;
+}
+
+.cancel {
+  background: none;
+  width: 50%;
+  padding: 0;
+  margin-bottom: 10%;
+  color: #7280a7;
+}
+
+.cancel:hover {
+  color: #1f2f56;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+@media (max-width: 1500px) {
+  main {
+    margin: 8% 35%;
+    padding: 2%;
+  }
+}
+
+@media (max-width: 1000px) {
+  main {
+    margin: 8% 30%;
+    padding: 3%;
+  }
+}
+
+@media (max-width: 750px) {
+  main {
+    margin: 8% 20%;
+    padding: 4%;
+  }
+}
+
+@media (max-width: 500px) {
+  main {
+    margin: 8% 10%;
+    padding: 5%;
+  }
+}
+
+@media (max-width: 400px) {
+  main {
+    margin: 8% 5%;
+    padding: 6%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
