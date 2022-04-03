@@ -1,0 +1,96 @@
+@import "./general";
+
+@include generalReset();
+
+body{
+    background-image: url(../assets/home/background-home-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+}
+/*
+    TO DO!
+    - hover states
+    - mobile & tablet views
+
+
+*/
+header{
+    color: $primaryWhite;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 3% 0;
+    padding-left: 3%;
+    text-transform: uppercase;
+
+    .logo{
+        flex-grow: 0;
+        align-self: center;
+        cursor: pointer;
+    }
+
+    .separator-line{
+        min-width: 40%;
+        height: 2px;
+        background-color: $primaryWhite;
+        align-self: center;
+        margin: 0 5%;
+        opacity: 0.2;
+    }
+
+    .menu{
+        min-width: 45%;
+        backdrop-filter: blur(10px);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2% 11% 2% 6%;
+        cursor: pointer;
+    }
+    
+}
+
+.content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5% 10%;
+
+    .hero_text{
+        color: $accentColor;
+        width: 50%;
+        & > h5{
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+    
+        & > h1{
+            text-transform: uppercase;
+            color: $primaryWhite;
+        }
+
+        .body-text{
+            width: 45ch;
+        }
+
+    }
+
+    .explore_button{
+        align-self: flex-end;
+        margin-right: 20%;
+        button{
+            width: 15vw;
+            height: 15vw;
+            border-radius: 50%;
+            background: white;
+            cursor: pointer;
+        }
+        
+    }
+}
