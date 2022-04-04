@@ -116,7 +116,9 @@ select {
 body {
   background: url(../assets/home/background-home-desktop.jpg) no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(33%, #0b2441), to(#0c0e18)) no-repeat;
   background: url(../assets/home/background-home-desktop.jpg) no-repeat, linear-gradient(180deg, #0b2441 33%, #0c0e18 100%) no-repeat;
-  background-size: 100% 150%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100vw 100vh;
 }
 
 main {
@@ -444,7 +446,6 @@ header .mobile-nav #menu li {
   body {
     background: url(../assets/home/background-home-tablet.jpg) no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(33%, #0b2441), to(#0c0e18));
     background: url(../assets/home/background-home-tablet.jpg) no-repeat, linear-gradient(180deg, #0b2441 33%, #0c0e18 100%);
-    background-size: 100% 120%;
   }
   .content {
     -webkit-box-orient: vertical;
@@ -498,9 +499,9 @@ header .mobile-nav #menu li {
 
 @media (max-width: 550px) {
   body {
-    background: url(../assets/home/background-home-mobile.jpg) no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(33%, #0b2441), to(#0c0e18));
-    background: url(../assets/home/background-home-mobile.jpg) no-repeat, linear-gradient(180deg, #0b2441 33%, #0c0e18 100%);
-    background-size: 100% 110%;
+    background: url(../assets/home/background-home-tablet.jpg) no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(33%, #0b2441), to(#0c0e18));
+    background: url(../assets/home/background-home-tablet.jpg) no-repeat, linear-gradient(180deg, #0b2441 33%, #0c0e18 100%);
+    background-size: 120vw 120vh;
   }
   .content .hero_text h1 {
     font-size: 80px;

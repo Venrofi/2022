@@ -4,7 +4,9 @@
 
 body{
     background: url(../assets/home/background-home-desktop.jpg) no-repeat, linear-gradient(180deg, hsla(213, 71%, 15%, 1) 33%, hsla(230, 33%, 7%, 1) 100%) no-repeat;
-    background-size: 100% 150%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100vw 100vh;
 }
 
 main{
@@ -275,7 +277,6 @@ header{
 @media (max-width: 1050px) {
     body{
         background: url(../assets/home/background-home-tablet.jpg) no-repeat, linear-gradient(180deg, hsla(213, 71%, 15%, 1) 33%, hsla(230, 33%, 7%, 1) 100%);
-        background-size: 100% 120%;
     }
 
     .content{
@@ -337,8 +338,8 @@ header{
 
 @media (max-width: 550px){
     body{
-        background: url(../assets/home/background-home-mobile.jpg) no-repeat, linear-gradient(180deg, hsla(213, 71%, 15%, 1) 33%, hsla(230, 33%, 7%, 1) 100%);
-        background-size: 100% 110%;
+        background: url(../assets/home/background-home-tablet.jpg) no-repeat, linear-gradient(180deg, hsla(213, 71%, 15%, 1) 33%, hsla(230, 33%, 7%, 1) 100%);
+        background-size: 120vw 120vh;
     }
 
     .content{
