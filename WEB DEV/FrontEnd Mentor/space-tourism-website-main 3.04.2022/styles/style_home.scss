@@ -5,7 +5,7 @@
 body{
     background-image: url(../assets/home/background-home-desktop.jpg);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 100% 150%;
 }
 
 main{
@@ -13,11 +13,7 @@ main{
     flex-direction: column;
 }
 /*
-    TO DO!
-    - hover states
-    - mobile & tablet views
-
-
+    https://space-tourism-multi-page-solution.netlify.app/index.html
 */
 header{
     color: $primaryWhite;
@@ -28,15 +24,14 @@ header{
     padding: 3% 0;
     padding-left: 3%;
     text-transform: uppercase;
-
+    
     .logo{
-        flex-grow: 0;
         align-self: center;
         cursor: pointer;
     }
 
     .separator-line{
-        min-width: 40%;
+        min-width: 30%;
         height: 2px;
         background-color: $primaryWhite;
         align-self: center;
@@ -45,16 +40,145 @@ header{
     }
 
     .menu{
-        min-width: 45%;
+        min-width: 55%;
         backdrop-filter: blur(10px);
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 2% 11% 2% 6%;
+        padding-right: 11%;
+        padding-left: 6%;
         cursor: pointer;
     }
+
+    .menu-home, .menu-destination, .menu-crew, .menu-technology{
+        text-decoration: none;
+        position: relative;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        &::before{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background-color: $primaryWhite;
+            bottom: 0;
+            left: 0;
+        }
+    }
+
+    .menu-destination, .menu-technology, .menu-crew{
+        &::before{
+            opacity: .5;
+            transform-origin: right;
+            transform: scaleX(0);
+            transition: transform .3s ease-in-out;
+        }
+        &:hover::before{
+            transform-origin: left;
+            transform: scaleX(1);
+        }
+    }
     
+    .mobile-nav{
+        display: none;
+        position: relative;
+        align-self: center;
+        right: 5%;
+        z-index: 1;
+        -webkit-user-select: none;
+        user-select: none;
+
+        & a{
+            text-decoration: none;
+            color: $primaryWhite;
+            transition: all 0.3s ease;
+        }
+        & a:hover{
+            font-weight: bold;
+        }
+
+        & input{
+          display: block;
+          width: 40px;
+          height: 32px;
+          position: absolute;
+          top: -7px;
+          left: -5px;
+          cursor: pointer;
+          opacity: 0; /* hide this */
+          z-index: 2; /* and place it over the hamburger */
+          -webkit-touch-callout: none;
+        }
+
+        & span{
+          display: block;
+          width: 33px;
+          height: 4px;
+          margin-bottom: 5px;
+          position: relative;
+          background: $accentColor;
+          border-radius: 3px;
+          z-index: 1;
+          transform-origin: 4px 0px;
+          transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                      background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                      opacity 0.55s ease;
+        }
+        & span:first-child
+        {
+          transform-origin: 0% 0%;
+        }
+        & span:nth-last-child(2)
+        {
+          transform-origin: 0% 100%;
+        }
+
+        & input:checked ~ span // Transform all the slices of hamburger into a crossmark.
+        {
+          opacity: 1;
+          transform: rotate(45deg) translate(-2px, -1px);
+        }
+
+        & input:checked ~ span:nth-last-child(3)
+        {
+          opacity: 0;
+          transform: rotate(0deg) scale(0.2, 0.2);
+        }
+
+        & input:checked ~ span:nth-last-child(2)
+        {
+          transform: rotate(-45deg) translate(0, -1px);
+        }
+
+        & input:checked ~ #menu //slide it in from the left
+        {
+          transform: none;
+        }
+
+        #menu{
+            position: absolute;
+            width: 300px;
+            height: 110vh;
+            right: -50px;
+            top: -10vh;
+            padding: 50px;
+            padding-top: 150px;
+            margin: 0;
+            background-color:rgba(0, 0, 0, 0.5);;
+            backdrop-filter: blur(10px);
+            list-style-type: none;
+            -webkit-font-smoothing: antialiased; /* to stop flickering of text in safari */
+            transform-origin: 0% 0%;
+            transform: translate(0, -200%);
+            transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+
+            & li{
+                padding: 10px 0;
+            }
+        }
+    }
 }
+
 
 .content{
     display: flex;
@@ -69,28 +193,195 @@ header{
             text-transform: uppercase;
             font-weight: 400;
         }
-    
         & > h1{
             text-transform: uppercase;
             color: $primaryWhite;
         }
-
         .body-text{
             width: 45ch;
         }
-
     }
 
     .explore_button{
         align-self: flex-end;
-        margin-right: 20%;
+        margin-right: 10%;
         button{
-            width: 15vw;
-            height: 15vw;
+            width: 325px;
+            height: 325px;
             border-radius: 50%;
-            background: white;
+            border: none;
+            background: $primaryWhite;
+            position: relative;
             cursor: pointer;
+
+            &::before{
+                content: '';
+                position: absolute;
+                top: 50%;  /* position the top edge of the element at the middle of the parent */
+                left: 50%; /* position the left edge of the element at the middle of the parent */
+                transform: translate(-50%, -50%); /* This is a shorthand of translateX(-50%) and translateY(-50%) */
+                width: 25vw;
+                height: 25vw;
+                border-radius: 50%;
+                border: none;
+                background: $primaryWhite;
+                z-index: -1;
+                visibility: hidden; 
+                opacity: 0;
+                transition: opacity .2s ease-out;
+                -moz-transition: opacity .2s ease-out;
+                -webkit-transition: opacity .2s ease-out;
+                -o-transition: opacity .2s ease-out;
+            }
+            &:hover::before{
+                visibility: visible;
+                opacity: 0.15;
+            }
+
         }
-        
     }
+}
+
+
+@media (max-width: 1300px) {
+    .content{
+        .explore_button{
+            margin-right: 0;
+
+            button{
+                width: 250px;
+                height: 250px;
+
+                &::before{
+                    width: 300px;
+                    height: 300px;
+                }
+            }
+        }
+    }
+
+    header{
+        .separator-line{
+            min-width: 20%;
+        }
+
+        .menu{
+            min-width: 65%;
+            padding-right: 5%;
+            padding-left: 5%;
+        }
+    }  
+}
+
+@media (max-width: 1050px) {
+    body{
+        background-image: url(../assets/home/background-home-tablet.jpg);
+        background-size: 100% 120%;
+    }
+
+    .content{
+        flex-direction: column;
+        align-items: center;
+
+        .explore_button{
+            align-self: center;
+            margin-top: 5rem;
+        }
+
+        .hero_text{
+            width: 100%;
+            text-align: center;
+    
+            .body-text{
+                width: 50%;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    header{
+        .separator-line{
+            min-width: 20%;
+        }
+
+        .menu{
+            min-width: 65%;
+            padding-right: 5%;
+            padding-left: 5%;
+        }
+    } 
+}
+
+@media (max-width: 850px){
+    .content{
+        .hero_text{
+            .body-text{
+                width: 75%;
+            }
+        }
+    }
+
+    header{
+        .separator-line{
+            display: none;
+        }
+        .menu{
+            min-width: 80%;
+            padding-right: 5%;
+            padding-left: 5%;
+        }
+        .nav-text-highlight{
+            display: none;
+        }
+    } 
+}
+
+@media (max-width: 550px){
+    body{
+        background-image: url(../assets/home/background-home-mobile.jpg);
+        background-size: 100% 110%;
+    }
+
+    .content{
+        .hero_text{
+            h1{
+                font-size: 80px;
+            }
+            h5{
+                font-size: 16px;
+            }
+            .body-text{
+                font-size: 15px;
+            }
+        }
+
+        .explore_button{
+            h4{
+                font-size: 20px;
+            }
+            button{
+                width: 150px;
+                height: 150px;
+
+                &::before{
+                    width: 200px;
+                    height: 200px;
+                }
+            }
+        }
+    }
+
+    header{
+        padding: 10% 5%;
+
+        .separator-line{
+            display: none;
+        }
+        .menu{
+            display: none;
+        }
+        .mobile-nav{
+            display: block;
+        }   
+    } 
 }
