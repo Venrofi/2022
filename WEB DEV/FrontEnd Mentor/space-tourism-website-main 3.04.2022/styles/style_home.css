@@ -114,8 +114,8 @@ select {
 }
 
 body {
-  background: url(../assets/home/background-home-desktop.jpg) no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(33%, #0b2441), to(#0c0e18));
-  background: url(../assets/home/background-home-desktop.jpg) no-repeat, linear-gradient(180deg, #0b2441 33%, #0c0e18 100%);
+  background: url(../assets/home/background-home-desktop.jpg) no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(33%, #0b2441), to(#0c0e18)) no-repeat;
+  background: url(../assets/home/background-home-desktop.jpg) no-repeat, linear-gradient(180deg, #0b2441 33%, #0c0e18 100%) no-repeat;
   background-size: 100% 150%;
 }
 

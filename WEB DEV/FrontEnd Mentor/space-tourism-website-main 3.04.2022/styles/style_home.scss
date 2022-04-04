@@ -3,7 +3,7 @@
 @include generalReset();
 
 body{
-    background: url(../assets/home/background-home-desktop.jpg) no-repeat, linear-gradient(180deg, hsla(213, 71%, 15%, 1) 33%, hsla(230, 33%, 7%, 1) 100%);
+    background: url(../assets/home/background-home-desktop.jpg) no-repeat, linear-gradient(180deg, hsla(213, 71%, 15%, 1) 33%, hsla(230, 33%, 7%, 1) 100%) no-repeat;
     background-size: 100% 150%;
 }
 
