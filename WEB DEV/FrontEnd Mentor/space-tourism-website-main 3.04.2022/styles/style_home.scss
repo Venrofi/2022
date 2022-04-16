@@ -40,40 +40,7 @@ header{
         opacity: 0.2;
     }
 
-    .menu{
-        min-width: 55%;
-        backdrop-filter: blur(10px);
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding-right: 11%;
-        padding-left: 6%;
-        cursor: pointer;
-
-        -webkit-touch-callout: none; /* iOS Safari */
-        -webkit-user-select: none; /* Safari */
-        -khtml-user-select: none; /* Konqueror HTML */
-        -moz-user-select: none; /* Old versions of Firefox */
-            -ms-user-select: none; /* Internet Explorer/Edge */
-                user-select: none; /* Non-prefixed version, currently
-                                    supported by Chrome, Edge, Opera and Firefox */
-    }
-
-    .menu-home, .menu-destination, .menu-crew, .menu-technology{
-        text-decoration: none;
-        position: relative;
-        padding-top: 5%;
-        padding-bottom: 5%;
-        &::before{
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 3px;
-            background-color: $primaryWhite;
-            bottom: 0;
-            left: 0;
-        }
-    }
+    @include Navigation();
 
     .menu-destination, .menu-technology, .menu-crew{
         &::before{
@@ -85,105 +52,6 @@ header{
         &:hover::before{
             transform-origin: left;
             transform: scaleX(1);
-        }
-    }
-    
-    .mobile-nav{
-        display: none;
-        position: relative;
-        align-self: center;
-        right: 5%;
-        z-index: 1;
-        -webkit-user-select: none;
-        user-select: none;
-
-        & a{
-            text-decoration: none;
-            color: $primaryWhite;
-            transition: all 0.3s ease;
-        }
-        & a:hover{
-            font-weight: bold;
-        }
-
-        & input{
-          display: block;
-          width: 40px;
-          height: 32px;
-          position: absolute;
-          top: -7px;
-          left: -5px;
-          cursor: pointer;
-          opacity: 0; /* hide this */
-          z-index: 2; /* and place it over the hamburger */
-          -webkit-touch-callout: none;
-        }
-
-        & span{
-          display: block;
-          width: 33px;
-          height: 4px;
-          margin-bottom: 5px;
-          position: relative;
-          background: $accentColor;
-          border-radius: 3px;
-          z-index: 1;
-          transform-origin: 4px 0px;
-          transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-                      background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-                      opacity 0.55s ease;
-        }
-        & span:first-child
-        {
-          transform-origin: 0% 0%;
-        }
-        & span:nth-last-child(2)
-        {
-          transform-origin: 0% 100%;
-        }
-
-        & input:checked ~ span // Transform all the slices of hamburger into a crossmark.
-        {
-          opacity: 1;
-          transform: rotate(45deg) translate(-2px, -1px);
-        }
-
-        & input:checked ~ span:nth-last-child(3)
-        {
-          opacity: 0;
-          transform: rotate(0deg) scale(0.2, 0.2);
-        }
-
-        & input:checked ~ span:nth-last-child(2)
-        {
-          transform: rotate(-45deg) translate(0, -1px);
-        }
-
-        & input:checked ~ #menu //slide it in from the left
-        {
-          transform: none;
-        }
-
-        #menu{
-            position: absolute;
-            width: 300px;
-            height: 110vh;
-            right: -50px;
-            top: -10vh;
-            padding: 50px;
-            padding-top: 150px;
-            margin: 0;
-            background-color:rgba(0, 0, 0, 0.5);;
-            backdrop-filter: blur(10px);
-            list-style-type: none;
-            -webkit-font-smoothing: antialiased; /* to stop flickering of text in safari */
-            transform-origin: 0% 0%;
-            transform: translate(0, -200%);
-            transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-
-            & li{
-                padding: 10px 0;
-            }
         }
     }
 }
@@ -285,6 +153,7 @@ header{
 @media (max-width: 1050px) {
     body{
         background: url(../assets/home/background-home-tablet.jpg) no-repeat, linear-gradient(180deg, hsla(213, 71%, 15%, 1) 33%, hsla(230, 33%, 7%, 1) 100%);
+        background-size: 100% 100%;
     }
 
     .content{

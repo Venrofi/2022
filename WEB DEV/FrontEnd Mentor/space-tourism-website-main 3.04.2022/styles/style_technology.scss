@@ -1,0 +1,55 @@
+@import "./general";
+
+@include generalReset();
+
+body{
+    background: url(../assets/technology/background-technology-desktop.jpg) no-repeat, linear-gradient(180deg, hsla(213, 71%, 15%, 1) 33%, hsla(230, 33%, 7%, 1) 100%) no-repeat;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100vw 100vh;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    color: $primaryWhite;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 3% 0;
+    padding-left: 3%;
+    text-transform: uppercase;
+    
+    .logo{
+        align-self: center;
+        cursor: pointer;
+    }
+
+    .separator-line{
+        min-width: 30%;
+        height: 2px;
+        background-color: $primaryWhite;
+        align-self: center;
+        margin: 0 5%;
+        opacity: 0.2;
+    }
+
+    @include Navigation();
+
+    .menu-home, .menu-destination, .menu-crew{
+        &::before{
+            opacity: .5;
+            transform-origin: right;
+            transform: scaleX(0);
+            transition: transform .3s ease-in-out;
+        }
+        &:hover::before{
+            transform-origin: left;
+            transform: scaleX(1);
+        }
+    }
+}

@@ -23,6 +23,7 @@ h4 {
 h5 {
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 28px;
+  font-weight: 400;
   letter-spacing: 4.75px;
 }
 
@@ -51,7 +52,7 @@ h5 {
 }
 
 .body-text {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Barlow', sans-serif;
   font-size: 18px;
   line-height: 32px;
 }
@@ -217,25 +218,6 @@ header .menu-home::before, header .menu-destination::before, header .menu-crew::
   left: 0;
 }
 
-header .menu-destination::before, header .menu-technology::before, header .menu-crew::before {
-  opacity: .5;
-  -webkit-transform-origin: right;
-          transform-origin: right;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  -webkit-transition: -webkit-transform .3s ease-in-out;
-  transition: -webkit-transform .3s ease-in-out;
-  transition: transform .3s ease-in-out;
-  transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
-}
-
-header .menu-destination:hover::before, header .menu-technology:hover::before, header .menu-crew:hover::before {
-  -webkit-transform-origin: left;
-          transform-origin: left;
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
-}
-
 header .mobile-nav {
   display: none;
   position: relative;
@@ -354,6 +336,25 @@ header .mobile-nav #menu li {
   padding: 10px 0;
 }
 
+header .menu-destination::before, header .menu-technology::before, header .menu-crew::before {
+  opacity: .5;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  transition: -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+}
+
+header .menu-destination:hover::before, header .menu-technology:hover::before, header .menu-crew:hover::before {
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
 .content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -458,6 +459,7 @@ header .mobile-nav #menu li {
   body {
     background: url(../assets/home/background-home-tablet.jpg) no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(33%, #0b2441), to(#0c0e18));
     background: url(../assets/home/background-home-tablet.jpg) no-repeat, linear-gradient(180deg, #0b2441 33%, #0c0e18 100%);
+    background-size: 100% 100%;
   }
   .content {
     -webkit-box-orient: vertical;

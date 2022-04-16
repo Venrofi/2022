@@ -1,0 +1,327 @@
+@import "./general";
+
+@include generalReset();
+
+body{
+    background: url(../assets/destination/background-destination-desktop.jpg) no-repeat, linear-gradient(180deg, hsla(213, 71%, 15%, 1) 33%, hsla(230, 33%, 7%, 1) 100%) no-repeat;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100vw 100vh;
+
+    .separator-line{
+        height: 2px;
+        background-color: $primaryWhite;
+        align-self: center;
+        margin: 10% 0 5% 0;
+        opacity: 0.2;
+    }
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    color: $primaryWhite;
+    margin: 0 11.5%;
+    .hero-text{
+        width: 100%;
+        text-transform: uppercase;
+        padding: 0.5vh 0 4vh 0;
+        span{
+            opacity: 0.25;
+            font-weight: 700;
+            margin-right: 2ch;
+        }
+    }
+
+    .content{
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+
+        .planet-info{
+            .body-text{
+                width: 43ch;
+                color: $accentColor;
+            }
+
+            .planet-stats{
+                display: flex;
+                text-transform: uppercase;
+
+                .subheading-2{
+                    color: $accentColor;
+                    margin-bottom: 8%;
+                }
+
+                .avg-distance{
+                    display: flex;
+                    flex-direction: column;
+                    margin-right: 10%;
+                }
+
+                .travel-time{
+                    display: flex;
+                    flex-direction: column;
+
+                }
+            }
+        }
+    }
+
+    .planet-menu{
+        display: flex;
+        width: 100%;
+        margin-bottom: 3vh;
+    }
+    .menu-moon, .menu-mars, .menu-europa, .menu-titan{
+        text-decoration: none;
+        position: relative;
+        padding-top: 1%;
+        padding-bottom: 3%;
+        margin-right: 5%;
+        &::before{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background-color: $primaryWhite;
+            bottom: 0;
+            left: 0;
+        }
+    }
+    .not-selected{
+        color: $accentColor;
+        &::before{
+            opacity: .5;
+            transform-origin: right;
+            transform: scaleX(0);
+            transition: transform .3s ease-in-out;
+        }
+        &:hover::before{
+            transform-origin: left;
+            transform: scaleX(1);
+        }
+    }
+}
+
+header{
+    color: $primaryWhite;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 3% 0;
+    padding-left: 3%;
+    text-transform: uppercase;
+    
+    .logo{
+        align-self: center;
+        cursor: pointer;
+    }
+
+    .separator-line{
+        min-width: 30%;
+        margin: 0 5%;
+    }
+
+    @include Navigation();
+
+    .menu-home, .menu-technology, .menu-crew{
+        &::before{
+            opacity: .5;
+            transform-origin: right;
+            transform: scaleX(0);
+            transition: transform .3s ease-in-out;
+        }
+        &:hover::before{
+            transform-origin: left;
+            transform: scaleX(1);
+        }
+    }
+}
+
+
+@media (max-width: 1300px) {
+
+    header{
+        .separator-line{
+            min-width: 20%;
+        }
+
+        .menu{
+            min-width: 65%;
+            padding-right: 5%;
+            padding-left: 5%;
+        }
+    }
+    
+    main{
+        margin: 0 10%;
+
+        .planet img{
+            width: 80%;     
+        }
+    }
+}
+
+@media (max-width: 1050px) {
+    body{
+        background: url(../assets/destination/background-destination-tablet.jpg) no-repeat, linear-gradient(180deg, hsla(213, 71%, 15%, 1) 33%, hsla(230, 33%, 7%, 1) 100%);
+        background-size: 100vw 150vh;
+    }
+
+
+    header{
+        .separator-line{
+            min-width: 20%;
+        }
+
+        .menu{
+            min-width: 65%;
+            padding-right: 5%;
+            padding-left: 5%;
+        }
+    }
+    
+    main{
+        margin: 0 10%;
+        margin-bottom: 5%;
+
+        .hero-text{
+            padding: 0;
+        }
+
+        .content{
+            flex-direction: column;
+            margin: 0 auto;
+            align-items: center;
+
+            .menu-moon, .menu-mars, .menu-europa, .menu-titan{
+                margin-right: 3%;
+            }
+
+            .planet img{
+                width: 75%;
+                margin: 0 auto;
+            }
+
+            .planet-info{
+                width: 100%;
+                text-align: center;
+                h2{
+                    font-size: 80px;
+                }
+                .body-text{
+                    font-size: 16px;
+                }
+                .planet-menu{
+                    justify-content: center;
+                    margin-top: 3%;
+                    margin-inline: 1%;
+                }
+
+                .body-text{
+                    margin: 0 auto;
+                    width: 80%;
+                }
+
+                .planet-stats{
+                    justify-content: space-around;
+                }
+            }
+        }
+        
+    }
+}
+
+@media (max-width: 850px){
+
+    header{
+        .separator-line{
+            display: none;
+        }
+        .menu{
+            min-width: 80%;
+            padding-right: 5%;
+            padding-left: 5%;
+        }
+        .nav-text-highlight{
+            display: none;
+        }
+    } 
+}
+
+@media (max-width: 550px){
+    body{
+        background: url(../assets/destination/background-destination-mobile.jpg) no-repeat, linear-gradient(180deg, hsla(213, 71%, 15%, 1) 33%, hsla(230, 33%, 7%, 1) 100%);
+        background-size: 120vw 150vh;
+    }
+
+    header{
+        padding: 10% 5%;
+
+        .separator-line{
+            display: none;
+        }
+        .menu{
+            display: none;
+        }
+        .mobile-nav{
+            display: block;
+        }   
+    }
+    
+    main{
+        margin: 0 6%;
+        margin-bottom: 10%;
+
+        .hero-text{
+            text-align: center;
+            font-size: 16px;
+            h5{
+                font-size: 20px;
+            }
+            span{
+                margin-right: 0;
+            }
+        }
+
+        .content{
+            .menu-moon, .menu-mars, .menu-europa, .menu-titan{
+                margin-right: 6%;
+                font-size: 14px;
+            }
+            .planet-info{
+                h2{
+                    font-size: 56px;
+                }
+                .body-text{
+                    font-size: 15px;
+                }
+                .planet-menu{
+                    justify-content: center;
+                    margin-top: 3%;
+                    margin-inline: 1%;
+                }
+
+                .body-text{
+                    margin: 0 auto;
+                    width: 80%;
+                }
+
+                .planet-stats{
+                    flex-direction: column;
+
+                    .avg-distance{
+                        margin: 0 auto;
+                        margin-bottom: 10%;
+                    }
+                    .travel-time{
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+        
+    }
+}
