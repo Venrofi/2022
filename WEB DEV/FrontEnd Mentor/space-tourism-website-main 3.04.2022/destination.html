@@ -14,7 +14,7 @@
 <body>
     <header>
         <div class="logo">
-            <a href="#">
+            <a href="index.html">
                 <img src="./assets/shared/logo.svg" alt="Logo">
              </a>
         </div>
@@ -48,7 +48,7 @@
         </div>
         <div class="content">
             <div class="planet">
-                <img src="./assets/destination/image-moon.png" alt="A picture of Mars">
+                <img src="./assets/destination/image-moon.png" alt="A picture of Mars" id="planet-img">
             </div>
             <div class="planet-info">
                 <div class="planet-menu nav-text">
@@ -73,5 +73,78 @@
             </div>
         </div>
     </main>
+    <script defer>
+        const moon = document.querySelector(".menu-moon")
+        const mars = document.querySelector(".menu-mars")
+        const europa = document.querySelector(".menu-europa")
+        const titan = document.querySelector(".menu-titan")
+
+        const planet_img = document.querySelector("#planet-img")
+        const planet_name = document.querySelector("#planet-name")
+        const planet_text = document.querySelector("#planet-text")
+        const planet_distance = document.querySelector("#planet-distance")
+        const planet_time = document.querySelector("#planet-time")
+        
+        mars.addEventListener("click", () =>{
+            //alert("Mars!")
+            mars.classList.remove("not-selected")
+            moon.classList.add("not-selected")
+            europa.classList.add("not-selected")
+            titan.classList.add("not-selected")
+
+            planet_img.src = "./assets/destination/image-mars.png"
+            planet_img.alt = "A picture of Mars"
+            
+            planet_name.innerText = "MARS"
+            planet_text.innerText = "Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!"
+            planet_distance.innerText = "225 MIL. KM"
+            planet_time.innerText = "9 months"
+        })
+
+        moon.addEventListener("click", () =>{
+            moon.classList.remove("not-selected")
+            mars.classList.add("not-selected")
+            europa.classList.add("not-selected")
+            titan.classList.add("not-selected")
+
+            planet_img.src = "./assets/destination/image-moon.png"
+            planet_img.alt = "A picture of Moon"
+            
+            planet_name.innerText = "MOON"
+            planet_text.innerText = "See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites."
+            planet_distance.innerText = "384,400 km"
+            planet_time.innerText = "3 days"
+        })
+
+        europa.addEventListener("click", () =>{
+            europa.classList.remove("not-selected")
+            moon.classList.add("not-selected")
+            mars.classList.add("not-selected")
+            titan.classList.add("not-selected")
+
+            planet_img.src = "./assets/destination/image-europa.png"
+            planet_img.alt = "A picture of Europa"
+            
+            planet_name.innerText = "EUROPA"
+            planet_text.innerText = "The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter lover’s dream. With an icy surface, it’s perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug wintery cabin."
+            planet_distance.innerText = "628 MIL. km"
+            planet_time.innerText = "3 years"
+        })
+
+        titan.addEventListener("click", () =>{
+            titan.classList.remove("not-selected")
+            moon.classList.add("not-selected")
+            europa.classList.add("not-selected")
+            mars.classList.add("not-selected")
+
+            planet_img.src = "./assets/destination/image-titan.png"
+            planet_img.alt = "A picture of Titan"
+            
+            planet_name.innerText = "TITAN"
+            planet_text.innerText = "The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn."
+            planet_distance.innerText = "1.6 BIL. km"
+            planet_time.innerText = "7 years"
+        })
+    </script>
 </body>
 </html>

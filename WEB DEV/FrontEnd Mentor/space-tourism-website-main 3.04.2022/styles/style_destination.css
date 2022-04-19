@@ -115,11 +115,10 @@ select {
 }
 
 body {
-  background: url(../assets/destination/background-destination-desktop.jpg) no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(33%, #0b2441), to(#0c0e18)) no-repeat;
-  background: url(../assets/destination/background-destination-desktop.jpg) no-repeat, linear-gradient(180deg, #0b2441 33%, #0c0e18 100%) no-repeat;
-  background-repeat: no-repeat;
+  background: url(../assets/destination/background-destination-desktop.jpg) no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(33%, #0A0E13), to(#0B0E17));
+  background: url(../assets/destination/background-destination-desktop.jpg) no-repeat, linear-gradient(180deg, #0A0E13 33%, #0B0E17 100%);
   background-attachment: fixed;
-  background-size: 100vw 100vh;
+  background-size: cover;
 }
 
 body .separator-line {
@@ -485,9 +484,9 @@ header .menu-home:hover::before, header .menu-technology:hover::before, header .
 
 @media (max-width: 1050px) {
   body {
-    background: url(../assets/destination/background-destination-tablet.jpg) no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(33%, #0b2441), to(#0c0e18));
-    background: url(../assets/destination/background-destination-tablet.jpg) no-repeat, linear-gradient(180deg, #0b2441 33%, #0c0e18 100%);
-    background-size: 100vw 150vh;
+    background: url(../assets/destination/background-destination-tablet.jpg) no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(33%, #0A0E13), to(#0B0E17));
+    background: url(../assets/destination/background-destination-tablet.jpg) no-repeat, linear-gradient(180deg, #0A0E13 33%, #0B0E17 100%);
+    background-size: cover;
   }
   header .separator-line {
     min-width: 20%;
@@ -564,9 +563,9 @@ header .menu-home:hover::before, header .menu-technology:hover::before, header .
 
 @media (max-width: 550px) {
   body {
-    background: url(../assets/destination/background-destination-mobile.jpg) no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(33%, #0b2441), to(#0c0e18));
-    background: url(../assets/destination/background-destination-mobile.jpg) no-repeat, linear-gradient(180deg, #0b2441 33%, #0c0e18 100%);
-    background-size: 120vw 150vh;
+    background: url(../assets/destination/background-destination-mobile.jpg) no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(33%, #0A0E13), to(#0B0E17));
+    background: url(../assets/destination/background-destination-mobile.jpg) no-repeat, linear-gradient(180deg, #0A0E13 33%, #0B0E17 100%);
+    background-size: cover;
   }
   header {
     padding: 10% 5%;
