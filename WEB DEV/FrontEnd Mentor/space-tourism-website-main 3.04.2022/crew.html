@@ -14,7 +14,7 @@
 <body>
     <header>
         <div class="logo">
-            <a href="#">
+            <a href="index.html">
                 <img src="./assets/shared/logo.svg" alt="Logo">
              </a>
         </div>
@@ -43,9 +43,102 @@
         </div>
     </header>
     <main>
+        <div class="hero-text">
+            <h5><span>02</span> Meet your crew</h5>
+        </div>
         <div class="content">
+            <div class="information">
+                <div class="name">
+                    <h4 id="crew-position">Commander</h4>
+                    <h3 id="crew-name">Douglas Hurley</h3>
+                </div>
+                <p class="body-text" id="crew-description">Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2.</p>
 
+                <div class="crew-menu">
+                    <a class="menu-1" href="#"></a>
+                    <a class="menu-2 not-selected" href="#"></a>
+                    <a class="menu-3 not-selected" href="#"></a>
+                    <a class="menu-4 not-selected" href="#"></a>
+                </div>
+            </div>
+            <div class="photo">
+                <img src="./assets/crew/image-douglas-hurley.png" id="crew-photo" alt="A photo of Douglas Hurley">
+            </div>
         </div>
     </main>
+    <script defer>
+        const mobile_nav = document.querySelector("input[type=checkbox]")
+
+        mobile_nav.addEventListener("click", ()=>{
+            if(mobile_nav.checked === true){
+                document.body.style.overflow = 'hidden'
+            }
+            else{
+                document.body.style.overflow = 'auto'
+            }
+        })
+
+        const menu_1 = document.querySelector(".menu-1")
+        const menu_2 = document.querySelector(".menu-2")
+        const menu_3 = document.querySelector(".menu-3")
+        const menu_4 = document.querySelector(".menu-4")
+
+        const crew_position = document.querySelector("#crew-position")
+        const crew_name = document.querySelector("#crew-name")
+        const crew_description = document.querySelector("#crew-description")
+        const crew_photo = document.querySelector("#crew-photo")
+
+        menu_1.addEventListener("click", () =>{
+            menu_1.classList.remove("not-selected")
+            menu_2.classList.add("not-selected")
+            menu_3.classList.add("not-selected")
+            menu_4.classList.add("not-selected")
+
+            crew_position.innerText = "Commander"
+            crew_name.innerText = "Douglas Hurley"
+            crew_description.innerText = "Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2."
+            crew_photo.src = "./assets/crew/image-douglas-hurley.png"
+            crew_photo.alt = "A photo of Douglas Hurley"
+        })
+
+        menu_2.addEventListener("click", () =>{
+            menu_2.classList.remove("not-selected")
+            menu_1.classList.add("not-selected")
+            menu_3.classList.add("not-selected")
+            menu_4.classList.add("not-selected")
+
+            crew_position.innerText = "Mission Specialist"
+            crew_name.innerText = "MARK SHUTTLEWORTH"
+            crew_description.innerText = "Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind the Linux-based Ubuntu operating system. Shuttleworth became the first South African to travel to space as a space tourist."
+            crew_photo.src = "./assets/crew/image-mark-shuttleworth.png"
+            crew_photo.alt = "A photo of Mark Shuttleworth"
+        })
+
+        menu_3.addEventListener("click", () =>{
+            menu_3.classList.remove("not-selected")
+            menu_1.classList.add("not-selected")
+            menu_2.classList.add("not-selected")
+            menu_4.classList.add("not-selected")
+
+            crew_position.innerText = "PILOT"
+            crew_name.innerText = "Victor Glover"
+            crew_description.innerText = "Pilot on the first operational flight of the SpaceX Crew Dragon to the International Space Station. Glover is a commander in the U.S. Navy where he pilots an F/A-18. He was a crew member of Expedition 64, and served as a station systems flight engineer."
+            crew_photo.src = "./assets/crew/image-victor-glover.png"
+            crew_photo.alt = "A photo of Victor Glover"
+        })
+
+        menu_4.addEventListener("click", () =>{
+            menu_4.classList.remove("not-selected")
+            menu_1.classList.add("not-selected")
+            menu_2.classList.add("not-selected")
+            menu_3.classList.add("not-selected")
+
+            crew_position.innerText = "Flight Engineer"
+            crew_name.innerText = "Anousheh Ansari"
+            crew_description.innerText = "Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. Ansari was the fourth self-funded space tourist, the first self-funded woman to fly to the ISS, and the first Iranian in space."
+            crew_photo.src = "./assets/crew/image-anousheh-ansari.png"
+            crew_photo.alt = "A photo of Anousheh Ansari"
+        })
+    </script>
 </body>
 </html>
