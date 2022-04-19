@@ -74,6 +74,17 @@
         </div>
     </main>
     <script defer>
+        const mobile_nav = document.querySelector("input[type=checkbox]")
+
+        mobile_nav.addEventListener("click", ()=>{
+            if(mobile_nav.checked === true){
+                document.body.style.overflow = 'hidden'
+            }
+            else{
+                document.body.style.overflow = 'auto'
+            }
+        })
+        
         const moon = document.querySelector(".menu-moon")
         const mars = document.querySelector(".menu-mars")
         const europa = document.querySelector(".menu-europa")

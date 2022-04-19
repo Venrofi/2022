@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://space-tourism-website-venrofi.netlify.app/)
+- Live Site URL: [SPACE-TOURISM-WEBSITE](https://space-tourism-website-venrofi.netlify.app/)
 
 ## My process
 

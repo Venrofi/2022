@@ -232,11 +232,11 @@ h5{
         }
 
         #menu{
-            position: absolute;
+            position: fixed;
             width: 300px;
-            height: 110vh;
-            right: -50px;
-            top: -10vh;
+            height: 100vh;
+            top: 0;
+            right: 0;
             padding: 50px;
             padding-top: 150px;
             margin: 0;
