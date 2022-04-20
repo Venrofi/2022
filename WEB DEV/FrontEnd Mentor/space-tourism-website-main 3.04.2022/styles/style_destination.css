@@ -216,6 +216,7 @@ main .menu-moon, main .menu-mars, main .menu-europa, main .menu-titan {
   padding-top: 1%;
   padding-bottom: 3%;
   margin-right: 5%;
+  cursor: pointer;
 }
 
 main .menu-moon::before, main .menu-mars::before, main .menu-europa::before, main .menu-titan::before {
@@ -349,6 +350,19 @@ header .mobile-nav a {
   transition: all 0.3s ease;
 }
 
+header .mobile-nav .current-menu::after {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 30px;
+  background-color: white;
+  right: 0;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transform: translateY(-150%);
+          transform: translateY(-150%);
+}
+
 header .mobile-nav a:hover {
   font-weight: bold;
 }
@@ -443,7 +457,7 @@ header .mobile-nav #menu {
 }
 
 header .mobile-nav #menu li {
-  padding: 10px 0;
+  padding: 20px 0;
 }
 
 header .menu-home::before, header .menu-technology::before, header .menu-crew::before {

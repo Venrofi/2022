@@ -169,6 +169,19 @@ h5{
             color: $primaryWhite;
             transition: all 0.3s ease;
         }
+
+        .current-menu{
+            &::after{
+                content: '';
+                position: absolute;
+                width: 5px;
+                height: 30px;
+                background-color: $primaryWhite;
+                right: 0;
+                transform: translateX(-100%);
+                transform: translateY(-150%);
+            }
+        }
         & a:hover{
             font-weight: bold;
         }
@@ -249,7 +262,7 @@ h5{
             transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 
             & li{
-                padding: 10px 0;
+                padding: 20px 0;
             }
         }
     }

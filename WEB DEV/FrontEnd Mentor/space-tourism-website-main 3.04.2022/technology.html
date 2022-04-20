@@ -7,13 +7,14 @@
     <title>Space Tourism Website - Technology</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="styles/style_technology.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="./assets/favicon-32x32.png"> 
+    <link rel="stylesheet" href="styles/style_technology.css">
 </head>
 <body>
     <header>
         <div class="logo">
-            <a href="#">
+            <a href="index.html">
                 <img src="./assets/shared/logo.svg" alt="Logo">
              </a>
         </div>
@@ -37,14 +38,145 @@
                     <a href="index.html"><li><b>00</b> Home</li></a>
                     <a href="destination.html"><li><b>01</b> Destination</li></a>
                     <a href="crew.html"><li><b>02</b> Crew</li></a>
-                    <a href="#"><li><b>03</b> Technology</li></a>
+                    <a href="#" class="current-menu"><li><b>03</b> Technology</li></a>
                 </ul>
         </div>
     </header>
     <main>
+        <div class="hero-text">
+            <h5><span>03</span> SPACE LAUNCH 101</h5>
+        </div>
         <div class="content">
-
+            <div class="information">
+                <div class="tech-menu">
+                    <a id="one"><h4>1</h4></a>
+                    <a class="not-selected" id="two"><h4>2</h4></a>
+                    <a class="not-selected" id="three"><h4>3</h4></a>
+                </div>
+                <div class="tech-text">
+                    <p class="nav-text">THE TERMINOLOGY…</p>
+                    <h3 id="tech-name">LAUNCH VEHICLE</h3>
+                    <p class="body-text" id="tech-description">A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!</p>
+                </div>
+            </div>
+            <div class="photo">
+                <img src="#" alt="A picture of the Launge Vehicle" id="tech-img">
+            </div>
         </div>
     </main>
+    <script>
+        const mobile_nav = document.querySelector("input[type=checkbox]")
+
+        mobile_nav.addEventListener("click", ()=>{
+            if(mobile_nav.checked === true){
+                document.body.style.overflow = 'hidden'
+            }
+            else{
+                document.body.style.overflow = 'auto'
+            }
+        })
+
+        const tech_name = document.querySelector("#tech-name")
+        const tech_description = document.querySelector("#tech-description")
+        const tech_img = document.querySelector("#tech-img")
+
+        const option_1 = document.querySelector("#one")
+        const option_2 = document.querySelector("#two")
+        const option_3 = document.querySelector("#three")
+        let option_active = 1
+
+        option_1.addEventListener("click", () =>{
+            option_active = 1
+            option_1.classList.remove("not-selected")
+            option_2.classList.add("not-selected")
+            option_3.classList.add("not-selected")
+
+            tech_name.innerText = "LAUNCH VEHICLE"
+            tech_description.innerText = "A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!"
+            tech_img.alt = "A picture of the Launch Vehicle"
+
+            if (window.innerWidth > 1300) {
+                tech_img.src = "./assets/technology/image-launch-vehicle-portrait.jpg"
+            }
+            else{
+                tech_img.src = "./assets/technology/image-launch-vehicle-landscape.jpg"
+            }
+        })
+
+        option_2.addEventListener("click", () =>{
+            option_active = 2
+            option_1.classList.add("not-selected")
+            option_2.classList.remove("not-selected")
+            option_3.classList.add("not-selected")
+
+            tech_name.innerText = "SPACEPORT"
+            tech_description.innerText = "A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, by analogy to the seaport for ships or airport for aircraft. Based in the famous Cape Canaveral, our spaceport is ideally situated to take advantage of the Earth’s rotation for launch."
+            tech_img.alt = "A picture of the Spaceport"
+
+            if (window.innerWidth > 1300) {
+                tech_img.src = "./assets/technology/image-spaceport-portrait.jpg"
+            }
+            else{
+                tech_img.src = "./assets/technology/image-spaceport-landscape.jpg"
+            }
+        })
+
+        option_3.addEventListener("click", () =>{
+            option_active = 3
+            option_1.classList.add("not-selected")
+            option_2.classList.add("not-selected")
+            option_3.classList.remove("not-selected")
+
+            tech_name.innerText = "SPACE CAPSULE"
+            tech_description.innerText = "A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to reenter the Earth's atmosphere without wings. Our capsule is where you'll spend your time during the flight. It includes a space gym, cinema, and plenty of other activities to keep you entertained."
+            tech_img.alt = "A picture of the Space Capsule"
+
+            if (window.innerWidth > 1300) {
+                tech_img.src = "./assets/technology/image-space-capsule-portrait.jpg"
+                //tech_img.setAttribute("content", "./assets/technology/image-space-capsule-portrait.jpg")
+                //tech_img.style.setProperty("content", "./assets/technology/image-space-capsule-portrait.jpg", "important")
+            }
+            else{
+                tech_img.src = "./assets/technology/image-space-capsule-landscape.jpg"
+                //tech_img.setAttribute("content", "./assets/technology/image-space-capsule-landscape.jpg")
+                //tech_img.style.setProperty("content", "./assets/technology/image-space-capsule-landscape.jpg", "important")
+
+            }
+        })
+
+        window.onresize = function () {
+            if (window.innerWidth < 1300) {
+                if(option_active == 1){
+                    tech_img.setAttribute("src", "./assets/technology/image-launch-vehicle-landscape.jpg");
+                }
+                if(option_active == 2){
+                    tech_img.setAttribute("src", "./assets/technology/image-spaceport-landscape.jpg");
+                }
+                if(option_active == 3){
+                    tech_img.setAttribute("src", "./assets/technology/image-space-capsule-landscape.jpg");
+                }
+            }
+            else{
+                if(option_active == 1){
+                    tech_img.setAttribute("src", "./assets/technology/image-launch-vehicle-portrait.jpg");
+                }
+                if(option_active == 2){
+                    tech_img.setAttribute("src", "./assets/technology/image-spaceport-portrait.jpg");
+                }
+                if(option_active == 3){
+                    tech_img.setAttribute("src", "./assets/technology/image-space-capsule-portrait.jpg");
+                }
+            }
+        }
+
+        window.onload = function() {
+            if (window.innerWidth > 1300) {
+                tech_img.src = "./assets/technology/image-launch-vehicle-portrait.jpg"
+            }
+            else{
+                tech_img.src = "./assets/technology/image-launch-vehicle-landscape.jpg"
+            }
+        };
+    </script>
 </body>
 </html>
