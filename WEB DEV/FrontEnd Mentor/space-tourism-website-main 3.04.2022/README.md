@@ -34,22 +34,25 @@ Users should be able to:
 ## My process
 
 To build this project I went over to Figma to better understand the design and all of the features.
-Firstly, I've created \_general styles where I've included colors, typography and code that would repeat in each file like reset properties.
+Firstly, I've created \_general styles where I've included colours, typography and code that would repeat in each file like reset properties.
 The next step was to build Home Page and style it following the design file.
-It's important to remember about responsivity of all components especially for the mobile devices.
+It's important to remember about responsivity of all components, especially for mobile devices.
 What was left to do were the subpages.
+
+For each subpage, I used JavaScript to update the content according to the needs. The process looked quite similar on every subpage: get the items that need to be updated, set on-click events on the buttons and fill the content. The most complex was the Destination subpage because there were images for horizontal and vertical views, and it needed to be properly protected and debugged.
 
 ### Built with
 
 - Semantic HTML5 markup
 - SASS
 - Flexbox
+- JavaScript
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+By completing this challenge I got to know how to translate a Figma design into a working website. I had to think on a larger scale about how to set up the typography, colours and other things to simplify the code as much as possible. I've enhanced my knowledge in SASS, writing cleaner CSS that can be reusable. I refreshed my knowledge in basic JavaScript to create all the necessary features for this project.
 
-By completing this challenge I got to know how to translate a Figma design into working website. I've enhanced my knowledge in SASS, writting cleaner CSS.
+I poured a lot of hours into this project, but I feel that I learned plenty. Along the way, I had smaller and bigger issues but with help of the internet, I managed to overcome everything without any additional help or tutorials that are available for this challenge.
 
 ## Author
 
