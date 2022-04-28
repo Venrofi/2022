@@ -1,6 +1,6 @@
-import { StyledHeader, Nav, Logo, Image } from "./styles/Header.styled"
+import { StyledHeader, Nav, Logo, Image, FlexHeroCenter, FlexNumbers } from "./styles/Header.styled"
 import { Container } from "./styles/Container.styled"
-import { Button } from "./styles/Button.styled"
+import { Button, ButtonOutline } from "./styles/Button.styled"
 import { Flex } from "./styles/Flex.styled"
 
 export default function Header(){
@@ -9,19 +9,33 @@ export default function Header(){
             <Container>
                 <Nav>
                     <Logo src='./images/logo.svg' alt='Huddle Logo'/>
-                    <Button>Try It Free</Button>
+                    <ButtonOutline>Try It Free</ButtonOutline>
                 </Nav>
 
-                <Flex>
+                <FlexHeroCenter>
                     <div>
                         <h1> Build The Community Your Fans Will Love </h1>
                         <p> Huddle re-imagines the way we build communities. You have a voice, but so does your audience. Create connections with your users as you engage in genuine discussion. </p>
 
-                        <Button bg='#ff0099' color="#fff"> Get Started For Free </Button>
+                        <Button> Get Started For Free </Button>
+                    </div>
+                </FlexHeroCenter>
+
+                <Image src='./images/screen-mockups.svg' alt=''/>
+                
+                <FlexNumbers>
+                    <div>
+                        <img src="./images/icon-communities.svg" alt="Communities Icon"/>
+                        <h2>1.4k+</h2>
+                        <p>Communities Formed</p>
                     </div>
 
-                    <Image src='./images/screen-mockups.svg' alt=''/>
-                </Flex>
+                    <div>
+                        <img src="./images/icon-messages.svg" alt="Messages Icon"/>
+                        <h2>2.7m+</h2>
+                        <p>Messages Sent</p>
+                    </div>
+                </FlexNumbers>
             </Container>
         </StyledHeader>
     )
