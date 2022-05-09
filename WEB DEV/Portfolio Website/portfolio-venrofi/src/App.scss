@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira+Stencil+One&family=Urbanist:wght@100;300;400;700&display=swap');
+@import "global.scss";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: 'Urbanist', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  background-color: $dark-blue;
+  background-image: url(./assets/crissxcross-transparent-bg-pattern50.png);
+  color: white;
+  text-align: center;
+}
+
+h1{
+  font-size: 96px;
+  font-weight: 700;
+  user-select: none;
+}
+h2{
+  font-size: 64px;
+  font-weight: 700;
+  user-select: none;
+}
+
+p{
+  font-size: 24px;
+  font-weight: 400;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+*:focus{
+  outline: none;
+}

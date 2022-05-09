@@ -1,0 +1,41 @@
+//COLORS
+
+$dark-blue: #00112B;
+$dark-red: #DA2424;
+$light-red: #FF2A2A;
+$white: #FFF;
+
+//BUTTONS
+
+.button-primary, .button-outline{
+    background-color: $dark-red;
+    border: 5px solid $dark-red;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    color: $white;
+    text-align: center;
+    font-size: 32px;
+    padding: 1rem 2rem;
+    min-width: 15rem;
+    //padding-block: 1rem;
+
+    &:hover, &:focus{
+        background-color: transparent;
+    }
+}
+
+.button-outline{
+    background-color: transparent;
+
+    &:hover, &:focus{
+        background-color: $dark-red;
+    }
+}
+
+//TEXT-HIGHLIGHT
+
+.text-highlight{
+    color: $light-red;
+    user-select: none;
+  }
