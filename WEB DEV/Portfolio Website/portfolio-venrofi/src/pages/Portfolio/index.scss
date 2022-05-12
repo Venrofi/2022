@@ -1,0 +1,75 @@
+@import "../../global.scss";
+
+.portfolio-main{
+    width: min(100% - 8rem, 100rem);
+    margin-inline: auto;
+    margin-block: 2rem;
+    text-align: left;
+
+    .portfolio-header{
+        text-align: center;
+        margin: 0;
+    }
+
+    .portfolio-section-heading{
+        margin-top: 6rem;
+    }
+
+    .portfolio-buttons{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-block: 6rem;
+    }
+}
+
+.project{
+    margin-bottom: 6rem;
+    margin-top: 1rem;
+
+    text-align: left;
+
+    .project-img{
+        width: fit-content;
+        margin-top: 2rem;
+        border-radius: 20px;
+        margin-inline: auto;
+    }
+
+    .project-buttons{
+        display: flex;
+        justify-content: center;
+        margin-block: 2rem;
+        gap: 2rem;
+    }
+
+    .project-compare{
+        border-radius: 20px;
+        margin-block: 2rem;
+    }
+}
+
+@media (max-width: 1050px){
+
+    .portfolio-main{
+        width: min(100% - 4rem, 100rem);
+    }
+}
+
+@media (max-width: 600px){
+
+    .portfolio-main{
+        width: min(100% - 2rem, 100rem);
+    }
+
+    .project{
+        .project-img, .project-compare{
+            border-radius: 10px;
+        }
+
+        .project-buttons{
+            margin-block: 2rem;
+            flex-direction: column;
+        }
+    }
+}

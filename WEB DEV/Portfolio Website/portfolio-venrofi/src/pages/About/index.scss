@@ -101,6 +101,7 @@
 
     .about-main{
         text-align: center;
+        width: min(100% - 4rem, 100rem);
     
         .about-hero{
             flex-direction: column;
@@ -155,6 +156,8 @@
 @media (max-width: 600px){
 
     .about-main{
+        width: min(100% - 2rem, 100rem);
+
         .about-hero{
             .about-text{
                 width: 90%;
@@ -204,17 +207,5 @@
             flex-direction: column;
             gap: 2rem;
         }
-    }
-
-    h2{
-            font-size: 48px;
-    }
-
-    p{
-        font-size: 18px;
-    }
-
-    button{
-        font-size: 24px;
     }
 }

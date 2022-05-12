@@ -17,9 +17,9 @@ const About = () => {
                 <div className="about-text">
                     <p>An aspiring Frontend Developer looking for my first full time job in IT.</p>
 
-                    <p>I am a Computer Science Student at the Silesian University of Technology. Already in the middle school, the topic of Web Development caught my attention and it is in this industry where I see my future. I love creating websites - designing UX / UI as well as turning the design into a working website.</p>
+                    <p>I am a Computer Science Student at the Silesian University of Technology. Already in middle school, the topic of Web Development caught my attention and this is the industry where I see my future in. I love creating websites - designing UX / UI as well as turning the design into a working website.</p>
 
-                    <p>I would love to work as a Web Developer in the form of an internship, apprenticeship or Junior position.</p>
+                    <p>I would love to work as a Web Developer in the form of an Internship, Apprenticeship or Junior position.</p>
 
                     <p>I am fluent in English and in my spare time I am slowly learning Italian on my own. On a personal level, I am an open, down to earth person with a lot of positive energy and smiles. I am reliable and capable in fast-paced environments, and I always deliver the finished product on time. I am highly organized and pride myself on being extremely attentive to detail.</p>
                 </div>
@@ -93,7 +93,30 @@ const About = () => {
                             <AiOutlineStar color="#DA2424"/>
                             <AiOutlineStar color="#DA2424"/>
                         </div>
-                    </div><div className="about-skill">
+                    </div>
+                    <div className="about-skill">
+                        <p>MySQL</p>
+
+                        <div>
+                            <AiFillStar color="#DA2424"/>
+                            <AiFillStar color="#DA2424"/>
+                            <AiFillStar color="#DA2424"/>
+                            <AiOutlineStar color="#DA2424"/>
+                            <AiOutlineStar color="#DA2424"/>
+                        </div>
+                    </div>
+                    <div className="about-skill">
+                        <p>Python</p>
+
+                        <div>
+                            <AiFillStar color="#DA2424"/>
+                            <AiFillStar color="#DA2424"/>
+                            <AiFillStar color="#DA2424"/>
+                            <AiOutlineStar color="#DA2424"/>
+                            <AiOutlineStar color="#DA2424"/>
+                        </div>
+                    </div>
+                    <div className="about-skill">
                         <p>C++</p>
 
                         <div>
@@ -103,7 +126,8 @@ const About = () => {
                             <AiOutlineStar color="#DA2424"/>
                             <AiOutlineStar color="#DA2424"/>
                         </div>
-                    </div><div className="about-skill">
+                    </div>
+                    <div className="about-skill">
                         <p>React</p>
 
                         <div>

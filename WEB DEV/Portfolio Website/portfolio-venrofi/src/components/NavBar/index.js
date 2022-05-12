@@ -25,13 +25,20 @@ const NavBar = () => {
     }, []);
 
     useEffect(() => {
-        if (size.width > 1050 && menuOpen) {
+        if (size.width > 1050 && menuOpen) { // When resizing with Menu opened - hide Menu & allow scrolling
             setMenuOpen(false);
+            document.body.style.overflow = 'auto';
         }
     }, [size.width, menuOpen]);
 
     const menuToggleHandler = () => {
-        setMenuOpen((p) => !p);
+        if (size.width < 1050 && !menuOpen) { // When Menu is open - block scrolling
+            document.body.style.overflow = 'hidden';
+        }
+        else{
+            document.body.style.overflow = 'auto';
+        }
+        setMenuOpen((p) => !p); // Toggle Menu
     };
     
     return (
