@@ -1,5 +1,7 @@
 import './index.scss'
 import { Link } from 'react-router-dom';
+import Loader from 'react-loaders';
+
 import NavBar from '../../components/NavBar'
 import LiveSite from '../../components/LiveSite'
 import DesignSimple from '../../components/DesignSimple'
@@ -62,6 +64,7 @@ const Portfolio = () => {
                     <Link to="/contact" className="button-outline">Contact Me</Link>
                 </div>
             </main>
+            <Loader type="ball-clip-rotate" />
         </>          
     )
 }

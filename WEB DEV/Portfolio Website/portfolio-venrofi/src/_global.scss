@@ -1,3 +1,6 @@
+@import "animate.css";
+@import "~loaders.css/src/animations/ball-clip-rotate.scss";
+
 //COLORS
 
 $dark-blue: #00112B;
@@ -51,4 +54,25 @@ $white: #FFF;
 .text-highlight{
     color: $light-red;
     user-select: none;
-  }
+}
+
+// PAGE-LOADER
+
+.loader-active{
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    animation: fadeOut 1s;
+    animation-fill-mode: forwards;
+}
+
+.ball-clip-rotate > div {
+    border-color: $dark-red;
+    border-bottom-color: transparent;
+}

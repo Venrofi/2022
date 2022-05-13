@@ -3,8 +3,14 @@ import './index.scss'
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import ReCAPTCHA from 'react-google-recaptcha';
+import loadjs from 'loadjs';
 
 const ContactForm = () => {
+  //LoadJS
+  var loadjs = require('loadjs');
+  loadjs('https://www.google.com/recaptcha/api.js');
+
+  //EmailJS 
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -20,6 +26,10 @@ const ContactForm = () => {
           alert("Failed to send the message, please try again.");
       });
   };
+
+  function onChange(value) {
+    console.log("Captcha value:", value);
+  }
 
   return (
       <>
@@ -39,11 +49,11 @@ const ContactForm = () => {
                     <li>
                         <textarea name="message" placeholder="Message" required />
                     </li>
-                    <li>
+                    <div className="form-submit">
+                        <div className="g-recaptcha" data-theme="dark" data-sitekey="6LdKGekfAAAAAABXIRrlQ9P4bS8QLxnTFx-jaw_m"></div>
                         <input type="submit" className="button-send" value="Send" />
-                    </li>
+                    </div>
                 </ul>
-                <div className="g-recaptcha" data-sitekey="6LdKGekfAAAAAABXIRrlQ9P4bS8QLxnTFx-jaw_m"></div>
             </form>
         </div>
       </>

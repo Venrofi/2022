@@ -1,6 +1,8 @@
 import './index.scss'
 import NavBar from '../../components/NavBar'
 import { Link } from 'react-router-dom';
+import Loader from 'react-loaders';
+
 
 const Home = () => {
     return (
@@ -14,6 +16,7 @@ const Home = () => {
             </div>
             {/* <h1 className="bg-text">FRONTEND <br/> UX / UI</h1> */}
           </main>
+          <Loader type="ball-clip-rotate" />
         </>
     )
 }

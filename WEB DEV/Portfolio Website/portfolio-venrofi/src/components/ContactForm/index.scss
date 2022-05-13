@@ -7,6 +7,18 @@
     form{
         margin-block: 2rem;   
     }
+
+    .form-submit{
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: 600px){
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+        }
+    }
     
     ul{
         li{
@@ -33,7 +45,7 @@
             }
 
             @media (max-width: 600px){
-                width: calc(50% - 1rem);
+                width: calc(50% - 0.5rem);
                 margin-left: 1rem;
             }
         }

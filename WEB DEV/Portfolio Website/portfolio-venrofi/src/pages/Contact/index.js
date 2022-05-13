@@ -2,7 +2,7 @@ import './index.scss'
 import NavBar from '../../components/NavBar'
 import ContactForm from '../../components/ContactForm'
 import { BsLinkedin, BsGithub } from 'react-icons/bs';
-
+import Loader from 'react-loaders';
 
 const Contact = () => {
     return (
@@ -26,7 +26,8 @@ const Contact = () => {
                         <BsGithub color="#DA2424"/>
                     </a>
                 </div>
-            </main>     
+            </main>
+            <Loader type="ball-clip-rotate" />    
         </>
     )
 }
