@@ -1,0 +1,59 @@
+@import "../../global.scss";
+
+
+.contact-form{
+    margin-block: 2rem;
+
+    form{
+        margin-block: 2rem;   
+    }
+    
+    ul{
+        li{
+            list-style: none;
+            margin-bottom: 2rem;
+            overflow: hidden;
+            display: block;
+            position: relative;
+            width: 100%;
+
+            @media (max-width: 600px){
+                margin-bottom: 1rem;
+            }
+        }
+
+        li.half{
+            width: calc(50% - 1rem);
+            margin-left: 2rem;
+            float: left;
+            clear: none;
+
+            &:first-child{
+                margin-left: 0;
+            }
+
+            @media (max-width: 600px){
+                width: calc(50% - 1rem);
+                margin-left: 1rem;
+            }
+        }
+    }
+}
+
+input[type="text"],
+input[type="email"],
+textarea{
+    width: 100%;
+    border: 0;
+    background-color: $light-blue;
+    height: 4rem;
+    color: $white;
+    padding: 0 1rem;
+    border-radius: 5px;
+}
+
+textarea{
+    padding: 1rem;
+    min-height: 10rem;
+    box-sizing: border-box;
+}

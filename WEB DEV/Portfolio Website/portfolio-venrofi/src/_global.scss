@@ -1,13 +1,14 @@
 //COLORS
 
 $dark-blue: #00112B;
+$light-blue: #011b42;
 $dark-red: #DA2424;
 $light-red: #FF2A2A;
 $white: #FFF;
 
 //BUTTONS
 
-.button-primary, .button-outline{
+.button-primary, .button-outline, .button-send{
     background-color: $dark-red;
     border: 5px solid $dark-red;
     border-radius: 3px;
@@ -37,6 +38,12 @@ $white: #FFF;
     &:hover, &:focus{
         background-color: $dark-red;
     }
+}
+
+.button-send{
+    min-width: 10rem;
+    margin-block: 0;
+    padding: 0;
 }
 
 //TEXT-HIGHLIGHT

@@ -41,7 +41,7 @@ const Portfolio = () => {
 
                 <h2 className="portfolio-section-heading">WEB <span className="text-highlight">DESIGN</span>.</h2>   
 
-                <DesignSimple name="Huddle Landing Page" tech="Figma"
+                <DesignSimple name="Glass Website" tech="Figma"
                     imgSrc={GlassWebsite}
                     imgAlt="A Screenshot of Glass Website Design"
                 />
