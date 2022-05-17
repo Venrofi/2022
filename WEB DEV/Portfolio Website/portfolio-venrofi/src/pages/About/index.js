@@ -87,7 +87,7 @@ const About = () => {
                                 <AiOutlineStar color="#DA2424"/>
                             </div>
                         </div><div className="about-skill">
-                            <p>Wordpress</p>
+                            <p>WordPress</p>
 
                             <div>
                                 <AiFillStar color="#DA2424"/>
