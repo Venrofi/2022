@@ -1,0 +1,10 @@
+button{
+    height: 100%;
+    width: 100%;
+    font-size: 3rem !important;
+
+    &:focus{
+        outline: none;
+        border: none;
+    }
+}

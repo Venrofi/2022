@@ -9,12 +9,11 @@ const httpOptions = {
     'Content-Type': 'application/json'
   })
 }
-
 @Injectable({
   providedIn: 'root'
 })
 export class TaskService {
-  private API_URL = 'http://localhost:5000/tasks';
+  private API_URL = 'https://static-api-venrofi.netlify.app/task-tracker/db.json';
 
   constructor(private http:HttpClient) { }
 

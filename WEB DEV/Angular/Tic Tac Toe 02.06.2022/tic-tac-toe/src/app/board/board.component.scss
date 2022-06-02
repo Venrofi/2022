@@ -1,0 +1,40 @@
+@use '../../themes.scss' as *;
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    span{
+        color: green;
+    }
+
+    main{
+        display: grid;
+        grid-template-columns: repeat(3, 200px);
+        grid-gap: 10px;
+        margin-inline: auto;
+        @media (max-width: 700px) {
+            grid-template-columns: repeat(3, 150px);
+        }
+        @media (max-width: 500px) {
+            grid-template-columns: repeat(3, 100px);
+        }
+    }
+    
+    app-square{
+        height: 200px;
+        @media (max-width: 700px) {
+            height: 150px;
+        }
+
+        @media (max-width: 500px) {
+            height: 100px;
+        }
+    }
+    
+    button{
+        margin: 2rem auto;
+    }
+}
