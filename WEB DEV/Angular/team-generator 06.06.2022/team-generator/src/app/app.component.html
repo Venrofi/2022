@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="ui card">
+    <h1>Team Generator</h1>
+    <ul class="list">
+      <li *ngFor="let member of members">{{ member }}</li>
+    </ul>
+
+    <div class="add-members-container">
+      <input type="text" placeholder="Name" 
+        #newMemberInput (input)="onInputMember(newMemberInput.value)" [value]="newMemberName" 
+        (keyup.enter)="addMember()" autofocus>
+
+      <button (click)="addMember()" (click)="newMemberInput.focus()">Add</button>
+    </div>
+
+    <div class="input-container">
+      <input type="text" placeholder="Number of Teams" 
+        #numberOfTeamsInput (input)="onNumberOfTeamsInput(numberOfTeamsInput.value)" [value]="numberOfTeams" 
+        (keyup.enter)="generateTeams()">
+
+      <button (click)="generateTeams()">Genarate!</button>
+    </div>
+    <p class="error-msg" *ngIf="errorMessage !== ''">{{ errorMessage }}</p>
+  </div>
+
+  <div class="teams-container" *ngIf="teams.length > 0">
+    <app-team *ngFor="let team of teams; let i = index" [team]="team" [index]="i"></app-team>
+  </div>
+</div>
+
+<p class="footer">Coded by<a href="https://venrofi.netlify.app/" target="_blank"> Radosław Terelak</a></p>
