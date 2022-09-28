@@ -66,7 +66,8 @@ const About = () => {
                                 <AiFillStar color="#DA2424"/>
                                 <AiOutlineStar color="#DA2424"/>
                             </div>
-                        </div><div className="about-skill">
+                        </div>
+                        <div className="about-skill">
                             <p>Figma</p>
 
                             <div>
@@ -76,8 +77,31 @@ const About = () => {
                                 <AiFillStar color="#DA2424"/>
                                 <AiOutlineStar color="#DA2424"/>
                             </div>
-                        </div><div className="about-skill">
-                            <p>JavaScript</p>
+                        </div>
+                        <div className="about-skill">
+                            <p>TypeScript</p>
+
+                            <div>
+                                <AiFillStar color="#DA2424"/>
+                                <AiFillStar color="#DA2424"/>
+                                <AiFillStar color="#DA2424"/>
+                                <AiFillStar color="#DA2424"/>
+                                <AiOutlineStar color="#DA2424"/>
+                            </div>
+                        </div>
+                        <div className="about-skill">
+                            <p>Angular</p>
+
+                            <div>
+                                <AiFillStar color="#DA2424"/>
+                                <AiFillStar color="#DA2424"/>
+                                <AiFillStar color="#DA2424"/>
+                                <AiFillStar color="#DA2424"/>
+                                <AiOutlineStar color="#DA2424"/>
+                            </div>
+                        </div>
+                        <div className="about-skill">
+                            <p>Storybook</p>
 
                             <div>
                                 <AiFillStar color="#DA2424"/>
@@ -86,7 +110,8 @@ const About = () => {
                                 <AiOutlineStar color="#DA2424"/>
                                 <AiOutlineStar color="#DA2424"/>
                             </div>
-                        </div><div className="about-skill">
+                        </div>
+                        <div className="about-skill">
                             <p>WordPress</p>
 
                             <div>
@@ -109,28 +134,6 @@ const About = () => {
                             </div>
                         </div>
                         <div className="about-skill">
-                            <p>Python</p>
-
-                            <div>
-                                <AiFillStar color="#DA2424"/>
-                                <AiFillStar color="#DA2424"/>
-                                <AiFillStar color="#DA2424"/>
-                                <AiOutlineStar color="#DA2424"/>
-                                <AiOutlineStar color="#DA2424"/>
-                            </div>
-                        </div>
-                        <div className="about-skill">
-                            <p>C++</p>
-
-                            <div>
-                                <AiFillStar color="#DA2424"/>
-                                <AiFillStar color="#DA2424"/>
-                                <AiFillStar color="#DA2424"/>
-                                <AiOutlineStar color="#DA2424"/>
-                                <AiOutlineStar color="#DA2424"/>
-                            </div>
-                        </div>
-                        <div className="about-skill">
                             <p>React</p>
 
                             <div>
@@ -140,7 +143,8 @@ const About = () => {
                                 <AiOutlineStar color="#DA2424"/>
                                 <AiOutlineStar color="#DA2424"/>
                             </div>
-                        </div><div className="about-skill">
+                        </div>
+                        <div className="about-skill">
                             <p>C#</p>
 
                             <div>
@@ -150,7 +154,8 @@ const About = () => {
                                 <AiOutlineStar color="#DA2424"/>
                                 <AiOutlineStar color="#DA2424"/>
                             </div>
-                        </div><div className="about-skill">
+                        </div>
+                        <div className="about-skill">
                             <p>Java</p>
 
                             <div>
