@@ -18,7 +18,7 @@ const About = () => {
                 <h2>My name is <span className="text-highlight">Radek</span>.</h2>  
                 <section className="about-hero">
                     <div className="about-text">
-                        <p>An aspiring Frontend Developer looking for my first full time job in IT.</p>
+                        <p>An aspiring Frontend Developer, hungry for new experiences in the IT industry.</p>
 
                         <p>I am a Computer Science Student at the Silesian University of Technology. Already in middle school, the topic of Web Development caught my attention and this is the industry where I see my future in. I love creating websites - designing UX / UI as well as turning the design into a working website.</p>
 
