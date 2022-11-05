@@ -1,0 +1,32 @@
+@import '../styles';
+
+.car-info{
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.wojewodztwa{
+  // outline: 1px solid $light-red;
+  // margin-block: 1rem;
+
+  button{
+    padding: 1rem 2rem;
+    font-size: 24px;
+    border: none;
+    background-color: #012863;
+    color: white;
+    font-weight: bold;
+    min-width: 350px;
+
+    &:hover, &:focus{
+      animation: pulse 1s;
+      box-shadow: 0 0 0 2em transparent;
+    }
+  }
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 #012863; }
+}

@@ -3,8 +3,8 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class Constants {
-  public readonly API_ENDPOINT: string = ' https://www.userdomain.com/';
-  public readonly API_MOCK_ENDPOINT: string = 'https://www.userdomainmock.com/';
+  public static API_ENDPOINT: string = 'https://api.cepik.gov.pl/';
+  public static API_PROXY_ENDPOINT: string = 'http://localhost:3000';
   public static TitleOfSite: string = 'CEPiK Car Database';
 }
 
