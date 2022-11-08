@@ -1,5 +1,4 @@
 import { Constants } from '../config/constants';
-// Angular Modules
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 

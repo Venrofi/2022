@@ -1,0 +1,17 @@
+@import '../../../styles';
+
+.car-info{
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  margin-inline: auto;
+  text-align: center;
+
+  h4{
+    cursor: pointer;
+
+    &:hover{
+      color: $light-red;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+}

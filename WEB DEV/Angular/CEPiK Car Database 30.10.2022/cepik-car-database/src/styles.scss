@@ -57,4 +57,20 @@ a, a:hover, a:focus, a:active {
 button{
   cursor: pointer;
   font-family: inherit;
+  padding: 1rem 2rem;
+  font-size: 24px;
+  border: none;
+  background-color: #012863;
+  color: white;
+  font-weight: bold;
+  min-width: 150px;
+
+  &:hover, &:focus{
+    animation: pulse 1s;
+    box-shadow: 0 0 0 2em transparent;
+  }
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 #012863; }
 }

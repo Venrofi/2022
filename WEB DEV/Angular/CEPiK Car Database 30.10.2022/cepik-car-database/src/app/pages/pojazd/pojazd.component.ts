@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-pojazd',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pojazd.component.scss']
 })
 export class PojazdComponent implements OnInit {
+  carName: string = '';
+  carAttributes: any = [];
 
-  constructor() { }
+  constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
+    this.carAttributes = this.dataService.getCarData();
+    this.carName = this.carAttributes.marka + " " + this.carAttributes.model || 'Nazwa pojazdu';
   }
 
+  resetData(){
+    this.dataService.setCarData(null);
+  }
 }

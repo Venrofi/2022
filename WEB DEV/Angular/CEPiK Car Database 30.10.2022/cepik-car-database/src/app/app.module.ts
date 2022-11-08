@@ -6,12 +6,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { WojewodztwoComponent } from './pages/wojewodztwo/wojewodztwo.component';
 import { PojazdComponent } from './pages/pojazd/pojazd.component';
+import { HomeComponent } from './pages/home/home.component';
+import { ErrorComponent } from './pages/error/error.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WojewodztwoComponent,
-    PojazdComponent
+    PojazdComponent,
+    HomeComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
