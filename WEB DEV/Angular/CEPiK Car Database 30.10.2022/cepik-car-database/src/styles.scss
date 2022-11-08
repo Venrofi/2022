@@ -30,6 +30,11 @@ body {
   background-color: $dark-blue;
   color: white;
   text-align: center;
+  margin-inline: 2rem;
+
+  @media (max-width: 600px){
+    margin-inline: 1rem;
+  }
 }
 
 /* TYPOGRAPHY */
@@ -38,6 +43,18 @@ h1{
   font-size: 64px;
   font-weight: 700;
   user-select: none;
+  margin-bottom: 1rem;
+  line-height: 2;
+
+  @media (max-width: 700px){
+    font-size: 48px;
+  }
+  @media (max-width: 600px){
+    font-size: 36px;
+    line-height: 1.5;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
 }
 
 p{

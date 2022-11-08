@@ -1,8 +1,10 @@
-<h1>Pojazdy - {{ wojName }}</h1>
+<h1>{{ wojName | lowercase }}</h1>
 <h4 *ngIf="carsData === null">Wyszukuję dane o pojazdach..</h4>
-<div class="car-info" *ngFor="let car of carsData">
-  <h4 routerLink="/pojazd" (click)="setCarData(car.attributes)">{{ car.attributes['rodzaj-pojazdu'] }}: {{ car.attributes.marka }} - {{ car.attributes.model }}</h4>
-  <p>Pierwsza rejestracja w kraju: {{ car.attributes['data-pierwszej-rejestracji-w-kraju'] }}</p>
+<div class="cars">
+  <div class="car-info" *ngFor="let car of carsData" (click)="setCarData(car.attributes)" routerLink="/pojazd">
+    <h4>{{ car.attributes['rodzaj-pojazdu'] }}</h4>
+    <p>{{ car.attributes.marka }} {{ car.attributes.model }}</p>
+  </div>
 </div>
 
 <button routerLink="" (click)="resetData()">Powrót</button>

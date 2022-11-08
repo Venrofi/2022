@@ -1,0 +1,11 @@
+button{
+  margin-block: 2rem;
+}
+
+p{
+  font-size: 24px;
+
+  @media (max-width: 600px){
+    font-size: 20px;
+  }
+}

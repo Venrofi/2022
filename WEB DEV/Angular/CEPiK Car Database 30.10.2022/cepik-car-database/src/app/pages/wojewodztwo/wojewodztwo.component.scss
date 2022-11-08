@@ -2,16 +2,27 @@
 
 .car-info{
   margin-top: 1rem;
-  margin-bottom: 2rem;
   margin-inline: auto;
   text-align: center;
+  background-color: $light-blue;
+  min-width: 250px;
+  padding: 1rem;
+  flex: 1;
 
-  h4{
-    cursor: pointer;
-
-    &:hover{
-      color: $light-red;
-      transition: all 0.3s ease-in-out;
-    }
+  cursor: pointer;
+  &:hover{
+    color: $light-red;
+    transition: all 0.3s ease-in-out;
   }
+}
+
+.cars{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+button{
+  margin-block: 2rem;
 }

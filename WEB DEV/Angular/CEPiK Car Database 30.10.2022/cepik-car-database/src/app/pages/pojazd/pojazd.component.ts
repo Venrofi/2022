@@ -14,7 +14,7 @@ export class PojazdComponent implements OnInit {
 
   ngOnInit(): void {
     this.carAttributes = this.dataService.getCarData();
-    this.carName = this.carAttributes.marka + " " + this.carAttributes.model || 'Nazwa pojazdu';
+    this.carName = this.carAttributes.marka + " " + this.carAttributes.model;
   }
 
   resetData(){
