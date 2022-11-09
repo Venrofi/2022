@@ -20,7 +20,6 @@ export class DataService {
     this._carData = data;
   }
   public getCarData(): Observable<any> {
-    console.log(this._carData);
     return this._carData;
   }
 }

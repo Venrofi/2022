@@ -23,6 +23,31 @@
   gap: 1rem;
 }
 
+.pagination{
+  margin: 2rem 0;
+}
+
+.pagination ::ng-deep .ngx-pagination{
+  margin: 2rem 0;
+  font-size: 24px;
+
+  @media (max-width: 600px){
+    font-size: 16px;
+  }
+
+  .current{
+    font-weight: bold;
+    background-color: $light-blue;
+  }
+
+  a{
+    color: $white;
+    &:hover{
+      background: $light-blue;
+    }
+  }
+}
+
 button{
   margin-block: 2rem;
 }
