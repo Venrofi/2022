@@ -12,6 +12,8 @@
 
 ## Overview
 
+This is an app that lets you browse through registered cars in Poland thanks to the official government API.
+
 ### Screenshot
 
 ![](./screenshot.png)
