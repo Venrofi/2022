@@ -28,7 +28,7 @@ export class HomeComponent implements OnInit {
       // })
 
       // For Netlify App
-      this.api.get('/pojazdy', {params: {'wojewodztwo': wojID, 'data-od': this.queryDate}}).subscribe(data =>{
+      axios.get('/pojazdy', {params: {'wojewodztwo': wojID, 'data-od': this.queryDate}}).then(data =>{
         this.tempCarsData = data;
         this.tempCarsData = this.tempCarsData.data.data;
         this.dataService.setCarsData(this.tempCarsData);
