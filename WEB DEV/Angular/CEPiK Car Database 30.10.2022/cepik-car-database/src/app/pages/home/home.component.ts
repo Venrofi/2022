@@ -19,7 +19,16 @@ export class HomeComponent implements OnInit {
 
     getCarsData(wojID: string, wojName: string) {
       this.dataService.wojName = wojName;
-      axios.get('/pojazdy', {params: {wojID: wojID, dataOd: this.queryDate}}).then(data =>{
+
+      // For Local development
+      // axios.get('/pojazdy', {params: {wojID: wojID, dataOd: this.queryDate}}).then(data =>{
+      //   this.tempCarsData = data;
+      //   this.tempCarsData = this.tempCarsData.data.data;
+      //   this.dataService.setCarsData(this.tempCarsData);
+      // })
+
+      // For Netlify App
+      this.api.get('/pojazdy', {params: {'wojewodztwo': wojID, 'data-od': this.queryDate}}).subscribe(data =>{
         this.tempCarsData = data;
         this.tempCarsData = this.tempCarsData.data.data;
         this.dataService.setCarsData(this.tempCarsData);
