@@ -1,2 +1,6 @@
 [build]
   ignore = "false"
+
+[[redirects]]
+  /slowniki/*  https://api.cepik.gov.pl/:splat  200
+  /pojazdy/*  https://api.cepik.gov.pl/:splat  200
