@@ -2,5 +2,6 @@
   ignore = "false"
 
 [[redirects]]
-  /slowniki/*  https://api.cepik.gov.pl/:splat  200
-  /pojazdy/*  https://api.cepik.gov.pl/:splat  200
+  from = "/slowniki/wojewodztwa"
+  to = "https://api.cepik.gov.pl/slowniki/wojewodztwa"
+  status = 200
