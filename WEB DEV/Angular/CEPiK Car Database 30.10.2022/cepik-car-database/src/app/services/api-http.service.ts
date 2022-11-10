@@ -7,6 +7,7 @@ export class ApiHttpService {
   constructor( private http: HttpClient ){};
 
   public get(url: string, options?: any){
-    return this.http.get(Constants.API_PROXY_ENDPOINT + url, options);
+    console.log('API Service get(): ' + Constants.API_ENDPOINT + url + '\nOptions: ' + options);
+    return this.http.get(Constants.API_ENDPOINT + url, options);
   }
 }

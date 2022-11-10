@@ -17,9 +17,9 @@ export class HomeComponent implements OnInit {
 
     constructor(private api: ApiHttpService, private dataService: DataService) { }
 
-    getCarsData(wojID: string, wojNmae: string) {
-      this.dataService.wojName = wojNmae;
-      axios.get('http://localhost:3000/pojazdy', {params: {wojID: wojID, dataOd: this.queryDate}}).then(data =>{
+    getCarsData(wojID: string, wojName: string) {
+      this.dataService.wojName = wojName;
+      axios.get('/pojazdy', {params: {wojID: wojID, dataOd: this.queryDate}}).then(data =>{
         this.tempCarsData = data;
         this.tempCarsData = this.tempCarsData.data.data;
         this.dataService.setCarsData(this.tempCarsData);
