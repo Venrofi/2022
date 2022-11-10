@@ -5,3 +5,5 @@
   from = "/slowniki/wojewodztwa"
   to = "https://api.cepik.gov.pl/slowniki/wojewodztwa"
   status = 200
+  force = true
+  headers = {X-From = "Netlify"}
