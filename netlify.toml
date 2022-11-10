@@ -7,3 +7,10 @@
   status = 200
   force = true
   headers = {X-From = "Netlify"}
+
+[[redirects]]
+  from = "/pojazdy"
+  to = "https://api.cepik.gov.pl/pojazdy"
+  status = 200
+  force = true
+  headers = {X-From = "Netlify"}

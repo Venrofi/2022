@@ -1,4 +1,3 @@
-import { Constants } from '../config/constants';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
@@ -7,7 +6,8 @@ export class ApiHttpService {
   constructor( private http: HttpClient ){};
 
   public get(url: string, options?: any){
-    console.log('API Service get(): ' + Constants.API_ENDPOINT + url + '\nOptions: ' + options);
+    // Use Proxy endpoint when running app locally:
+    // return this.http.get(Constants.API_PROXY_ENDPOINT + url, options);
     return this.http.get(url, options);
   }
 }
