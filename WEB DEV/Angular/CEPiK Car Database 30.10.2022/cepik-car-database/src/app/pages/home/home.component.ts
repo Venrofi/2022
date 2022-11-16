@@ -17,9 +17,18 @@ export class HomeComponent implements OnInit {
 
     constructor(private api: ApiHttpService, private dataService: DataService) { }
 
-    getCarsData(wojID: string, wojNmae: string) {
-      this.dataService.wojName = wojNmae;
-      axios.get('http://localhost:3000/pojazdy', {params: {wojID: wojID, dataOd: this.queryDate}}).then(data =>{
+    getCarsData(wojID: string, wojName: string) {
+      this.dataService.wojName = wojName;
+
+      // For Local development
+      // axios.get(Constants.API_PROXY_ENDPOINT + '/pojazdy', {params: {wojID: wojID, dataOd: this.queryDate}}).then(data =>{
+      //   this.tempCarsData = data;
+      //   this.tempCarsData = this.tempCarsData.data.data;
+      //   this.dataService.setCarsData(this.tempCarsData);
+      // })
+
+      // For Netlify App
+      axios.get('/pojazdy', {params: {'wojewodztwo': wojID, 'data-od': this.queryDate}}).then(data =>{
         this.tempCarsData = data;
         this.tempCarsData = this.tempCarsData.data.data;
         this.dataService.setCarsData(this.tempCarsData);
