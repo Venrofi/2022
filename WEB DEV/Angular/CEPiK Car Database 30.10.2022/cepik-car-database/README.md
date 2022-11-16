@@ -2,9 +2,11 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.6.
 
-## Development server
+## Development
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+
+Run `npm run devStart` for a API Proxy Server. It is hosted at `http://localhost:3000/`. The server will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 

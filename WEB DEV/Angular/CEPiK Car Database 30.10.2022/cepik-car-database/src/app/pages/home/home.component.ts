@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
       this.dataService.wojName = wojName;
 
       // For Local development
-      // axios.get('/pojazdy', {params: {wojID: wojID, dataOd: this.queryDate}}).then(data =>{
+      // axios.get(Constants.API_PROXY_ENDPOINT + '/pojazdy', {params: {wojID: wojID, dataOd: this.queryDate}}).then(data =>{
       //   this.tempCarsData = data;
       //   this.tempCarsData = this.tempCarsData.data.data;
       //   this.dataService.setCarsData(this.tempCarsData);
