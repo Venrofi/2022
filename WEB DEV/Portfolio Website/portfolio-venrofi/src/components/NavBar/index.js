@@ -1,6 +1,6 @@
 import './index.scss';
 import React, { useEffect, useState } from "react";
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import logo from '../../assets/venrofi_logo_transparent.png';
 import {BiMenuAltRight} from 'react-icons/bi';
 import {AiOutlineClose} from 'react-icons/ai';
@@ -46,9 +46,9 @@ const NavBar = () => {
             <header className="page-header">
                 <Link to="/" className="nav-logo"><img src={logo} alt="logo" /></Link>
                 <nav className={`${"nav-desktop"} ${ menuOpen && size.width < 1050 ? "mobile-menu-open" : "" }`}>
-                    <Link to="/about" className="nav-link" onClick={menuToggleHandler}>About</Link>
-                    <Link to="/portfolio" className="nav-link" onClick={menuToggleHandler}>Portfolio</Link>
-                    <Link to="/contact" className="nav-link" onClick={menuToggleHandler}>Contact</Link>
+                    <NavLink to="/about" className="nav-link" onClick={menuToggleHandler}>About</NavLink>
+                    <NavLink to="/portfolio" className="nav-link" onClick={menuToggleHandler}>Portfolio</NavLink>
+                    <NavLink to="/contact" className="nav-link" onClick={menuToggleHandler}>Contact</NavLink>
                 </nav>
                 <button className="nav-button">
                     {!menuOpen ? (<BiMenuAltRight onClick={menuToggleHandler} />) : (<AiOutlineClose onClick={menuToggleHandler} />)}
