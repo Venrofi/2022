@@ -4,10 +4,14 @@
     width: min(100% - 8rem, 100rem);
     margin-inline: auto;
     margin-block: 2rem;
-    text-align: left;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     h1{
-        width: 20ch;
+        width: 15ch;
     }
 
     .bg-text{
