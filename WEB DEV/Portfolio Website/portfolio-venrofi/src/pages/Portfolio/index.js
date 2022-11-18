@@ -9,6 +9,7 @@ import DesignPrototype from '../../components/DesignPrototype'
 import ReDesign from '../../components/ReDesign'
 
 import SpaceTourism from '../../assets/portfolio/preview-space-tourism.png';
+import CepikCarDatabase from '../../assets/portfolio/preview-cepik-car-database.png';
 import Huddle from '../../assets/portfolio/preview-huddle.png';
 import Phlox from '../../assets/portfolio/preview-phlox.png';
 import GlassWebsite from '../../assets/portfolio/preview-glass-website.png';
@@ -32,6 +33,13 @@ const Portfolio = () => {
                     codeLink="https://github.com/Venrofi/2022/tree/main/WEB%20DEV/FrontEnd%20Mentor/space-tourism-website-main%203.04.2022"
                     imgSrc={SpaceTourism}
                     imgAlt="A Screenshot of Space Tourism Home Page"
+                />
+
+                <LiveSite name="CEPiK Car Database" tech1="Angular" tech2="Typescript" 
+                    siteLink="https://cepik-car-database-venrofi.netlify.app/" 
+                    codeLink="https://github.com/Venrofi/2022/tree/main/WEB%20DEV/Angular/CEPiK%20Car%20Database%2030.10.2022"
+                    imgSrc={CepikCarDatabase}
+                    imgAlt="A Screenshot of CEPiK Car Database Main Page"
                 />
 
                 <LiveSite name="Huddle Landing Page" tech1="React" tech2="Styled Components" 
