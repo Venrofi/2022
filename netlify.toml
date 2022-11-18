@@ -2,11 +2,6 @@
   ignore = "false"
 
 [[redirects]]
-  from = "/*"
-  to = "/"
-  status = 200
-
-[[redirects]]
   from = "/slowniki/wojewodztwa"
   to = "https://api.cepik.gov.pl/slowniki/wojewodztwa"
   status = 200
@@ -19,3 +14,8 @@
   status = 200
   force = true
   headers = {X-From = "Netlify"}
+
+[[redirects]]
+  from = "/*"
+  to = "/"
+  status = 200
