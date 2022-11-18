@@ -2,6 +2,11 @@
   ignore = "false"
 
 [[redirects]]
+  from = "/*"
+  to = "/"
+  status = 200
+
+[[redirects]]
   from = "/slowniki/wojewodztwa"
   to = "https://api.cepik.gov.pl/slowniki/wojewodztwa"
   status = 200
